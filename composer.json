@@ -1,0 +1,70 @@
+{
+    "name": "datomatic/laravel-prisma-bridge",
+    "description": "Prisma bridge for Laravel",
+    "keywords": [
+        "datomatic",
+        "laravel",
+        "prisma",
+        "laravel-prisma-bridge"
+    ],
+    "homepage": "https://github.com/datomatic/laravel-prisma-bridge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roberto Negro",
+            "email": "info@squidlab.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "doctrine/dbal": "^2.13.3|^3.1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Datomatic\\LaravelPrismaBridge\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Datomatic\\LaravelPrismaBridge\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Datomatic\\LaravelPrismaBridge\\LaravelPrismaBridgeServiceProvider",
+                "Datomatic\\LaravelPrismaBridge\\Providers\\PrismaServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
