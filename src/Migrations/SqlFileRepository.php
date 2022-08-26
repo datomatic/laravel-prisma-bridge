@@ -19,7 +19,9 @@ class SqlFileRepository
             $prismaPath,
             'migrations',
         ]);
-
+        if (! File::exists($directoryPath)) {
+            File::makeDirectory($directoryPath, 0755, true);
+        }
         $directories = File::directories($directoryPath);
         $directories = collect($directories)->map(function ($directory) {
             $pos = strrpos($directory, '/');
@@ -85,7 +87,9 @@ class SqlFileRepository
             'migrations',
             $name,
         ]);
-        File::makeDirectory($directoryPath, 0755, true);
+        if (! File::exists($directoryPath)) {
+            File::makeDirectory($directoryPath, 0755, true);
+        }
 
         $filePath = $directoryPath.DIRECTORY_SEPARATOR.'migration.sql';
         $result = File::put($filePath, $queries);
