@@ -61,10 +61,8 @@ class SqlFileRepository
     /**
      * Create a migration sql file to be used by Prisma
      *
-     * @param  string  $name
      * @param  string|string[]  $queries
      * @param  bool  $addTimestamp Adds timestamp to the name of the migration
-     * @return string|false
      */
     public function createMigrationSqlFile(string $name, string|array $queries, bool $addTimestamp = true): string|false
     {

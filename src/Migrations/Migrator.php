@@ -20,8 +20,6 @@ class Migrator extends BaseMigrator
 
     /**
      * The sql file repository instance.
-     *
-     * @var SqlFileRepository
      */
     protected SqlFileRepository $sqlFileRepository;
 
@@ -58,7 +56,6 @@ class Migrator extends BaseMigrator
      *
      * @param  object  $migration
      * @param  string  $method
-     * @return void
      */
     protected function createSqlFileFromMigration($migration, $method): void
     {
@@ -84,8 +81,6 @@ class Migrator extends BaseMigrator
 
     /**
      * Run prisma commands to run migrations, update schema and generate models
-     *
-     * @return void
      */
     protected function runPrismaMigrations(): void
     {

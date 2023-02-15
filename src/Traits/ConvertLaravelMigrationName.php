@@ -6,9 +6,6 @@ trait ConvertLaravelMigrationName
 {
     /**
      * Convert laravel migration name to prisma format
-     *
-     * @param  string  $name
-     * @return array
      */
     protected function convertLaravelMigrationName(string $name, string $prefix = ''): array
     {
