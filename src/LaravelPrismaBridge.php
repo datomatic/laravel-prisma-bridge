@@ -2,6 +2,4 @@
 
 namespace Datomatic\LaravelPrismaBridge;
 
-class LaravelPrismaBridge
-{
-}
+class LaravelPrismaBridge {}

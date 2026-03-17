@@ -31,7 +31,7 @@ class Migrator extends BaseMigrator
         MigrationRepositoryInterface $repository,
         Resolver $resolver,
         Filesystem $files,
-        Dispatcher $dispatcher = null)
+        ?Dispatcher $dispatcher = null)
     {
         $this->sqlFileRepository = $sqlFileRepository;
         parent::__construct($repository, $resolver, $files, $dispatcher);

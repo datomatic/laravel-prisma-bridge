@@ -15,7 +15,7 @@ class PrismaServiceProvider extends MigrationServiceProvider
     protected function registerRepository()
     {
         $this->app->singleton('sqlfile.repository', function () {
-            return new SqlFileRepository();
+            return new SqlFileRepository;
         });
 
         $this->app->singleton('migration.repository', function ($app) {

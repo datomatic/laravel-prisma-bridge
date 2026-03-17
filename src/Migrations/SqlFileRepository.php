@@ -40,7 +40,7 @@ class SqlFileRepository
 
             return false;
         })
-          ->toArray();
+            ->toArray();
 
         $maxIndex = -1;
         foreach ($directories as $directory) {
@@ -62,7 +62,7 @@ class SqlFileRepository
      * Create a migration sql file to be used by Prisma
      *
      * @param  string|string[]  $queries
-     * @param  bool  $addTimestamp Adds timestamp to the name of the migration
+     * @param  bool  $addTimestamp  Adds timestamp to the name of the migration
      */
     public function createMigrationSqlFile(string $name, string|array $queries, bool $addTimestamp = true): string|false
     {
